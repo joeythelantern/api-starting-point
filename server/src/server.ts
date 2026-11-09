@@ -12,6 +12,7 @@ import { loggingHandler } from './middleware/loggingHandler';
 import { routeNotFound } from './middleware/routeNotFound';
 import { defineRoutes } from './modules/routing';
 import MainController from './controllers/main';
+import { APP_VERSION } from '@malia/shared-library';
 
 /**
  * Server class contains everything we need to start up our API.
@@ -65,6 +66,9 @@ export class Server {
         this.server.listen(server.SERVER_PORT, () => {
             logging.log('----------------------------------------');
             logging.log(`Server started on ${server.SERVER_HOSTNAME}:${server.SERVER_PORT}`);
+            logging.log('----------------------------------------');
+            logging.log('----------------------------------------');
+            logging.log(`Server running version ${APP_VERSION}`);
             logging.log('----------------------------------------');
         });
     }

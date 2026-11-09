@@ -1,0 +1,5 @@
+**/assets/
+**/serviceWorker*
+**/setupTests*
+**/*.d.ts
+**/*/*.json

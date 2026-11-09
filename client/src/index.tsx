@@ -1,17 +1,18 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import reportWebVitals from "./reportWebVitals";
-import Application from "./application";
-import "./config/logging";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import reportWebVitals from './reportWebVitals';
+import Application from './application';
+import './config/logging';
+import { APP_VERSION } from '@malia/shared-library';
 
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+
+logging.log(`Client running version ${APP_VERSION}`);
 
 root.render(
-  <React.StrictMode>
-    <Application />
-  </React.StrictMode>
+    <React.StrictMode>
+        <Application />
+    </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
